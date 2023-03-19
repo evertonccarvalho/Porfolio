@@ -149,6 +149,7 @@ header ul li:hover a
     bottom: 30px;
     display: flex;
     gap: 20px;
+    z-index: 1;
 }
 .social li{
     list-style: none;
@@ -171,19 +172,31 @@ header ul li:hover a
     margin: 150px auto 0;
 
 }
+
+.Skills{
+    position: absolute;
+    bottom: 150px;
+    left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 200px;
+    width: 600px;
+
+}
+
 .bar{
     color: #666;
     letter-spacing: 1px;
     font-weight: 500;
     font-size: 10px;
     position: relative;
-}
-.bar{
     display: inline-block;
     margin-bottom: 2px;
-    width: 100%;
+    width: calc((100% / 2) - 1rem);
+    margin: 0.5rem;
 
 }
+
 .bar span{
     position: relative;
     display: inline-block;
@@ -252,12 +265,11 @@ abbr{
 
 .dayNight
 {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
+
+
     transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     background: #f0f0f0;
     border-radius: 50%;
     color: #666;
@@ -267,9 +279,10 @@ abbr{
     cursor: pointer;
     transition: 0.5s;
     font-size: 2em;
+    z-index: 1;
 }
 .main.night .dayNight{
-    background: #666;
+    background: #000000;
     color: #fff;
 }
 
@@ -294,6 +307,7 @@ abbr{
 .main.night #contato .secText h2 ,
 .main.night #contato .secText p,
 .main.night .bar
+
 {
     color: #fff;
 }
@@ -312,7 +326,7 @@ abbr{
     position: absolute;
     right: 0;
     max-width: 800px;
-    animation: animateColor 8s ease-in-out infinite;
+    animation: animateColors 8s ease-in-out infinite;
 }
 @keyframes animateColor
 {
@@ -496,3 +510,186 @@ abbr{
 }
 
 /* responsivo */
+
+@media (max-width: 900px){
+    header{
+        padding: 20px 50px;
+    }
+    #home{
+        padding: 150px 50px;
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    #home .content h2{
+        font-size: 3em;
+    }
+
+    #home .content p{
+        font-size: 15px;
+        margin-right: 60px;
+        }
+       
+    .btn{
+        max-width: 170px;
+        padding: 10px 20px;
+       
+    }
+    #home .men{
+        position: absolute;
+        height: 50vh;
+        right: 0;
+
+    }
+    
+    #home .colors{
+    max-width: 300px;
+    position: absolute;
+    bottom: 20%;
+
+    }
+    #home::before{
+    max-width: 100px;
+    max-height: 100px;
+    }
+    .Skills{
+        height: 200px;
+        width: 400px;
+        left: 10%;
+    }
+    .bar{
+        
+        height: 30px;        
+     
+    }
+    .menuToggle
+    {
+        position: relative;
+        width: 30px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        
+    }
+
+    .menuToggle::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #222;
+        transform: translateY(-10px);
+        transition: 0.5s;
+        box-shadow: 0 10px #222;
+    }
+    .menuToggle::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #222;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    header.active .menuToggle::before{
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #222;
+    }
+    header.active .menuToggle::after{
+        transform: translateY(0px) rotate(315deg);
+       
+    }
+    header ul{
+        display: none;
+
+    }
+    header.active ul
+    
+    {
+        position: fixed;
+        left: 0;
+        top: 84px;
+        width: 100%;
+        height: calc(100vh - 84px);
+        background: rgba(0, 0, 0, 0.95);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1000;
+        gap: 20px;
+    
+    }
+        /* menu dayNyght */
+    
+
+    .main.night .menuToggle::after 
+    {       
+        background: #fff; 
+    }
+
+    .main.night .menuToggle::before
+    
+    {
+        background-color: #fff;
+        box-shadow: 0 10px #fff
+        
+    }
+    .main.night header.active .menuToggle::before
+    {
+        transform: translateY(0px) rotate(45deg);
+        box-shadow: 0 0 #222;
+    }
+
+    .social  {
+        flex-direction: column;
+        gap: 10px;        
+        right: 10%;
+        bottom: 50%;
+        z-index: 10;
+    }
+}
+@media (max-width: 740px)
+{
+    #home .content h2{
+        font-size: 2em;
+    }
+    #home .content p{
+        font-size: 15px;
+        margin-right: 60px;
+    }
+   
+    .Skills{
+        width: 200px;    
+    }
+
+   
+}
+
+@media (max-width: 420px)
+{
+
+    #home .content h2
+    {
+        font-size: 1.5em;
+    }
+    #home .content p
+    {
+        font-size: 13px;
+    }
+    .btn
+    {
+        max-width: 110px ;
+         font-size: 10px;
+    }
+    #home .men
+    {
+        height: 40vh;
+    }
+    .Skills
+    {
+        width: 150px;        
+    }
+}
+

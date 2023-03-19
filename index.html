@@ -10,13 +10,18 @@
 <body>
     <section class="main">
         <header> 
-            <a href="#" class =" logo">Portfólio</a>
+            <a href="#" class =" logo">Portfolio</a>
             <div class="menuToggle"></div>
+
             <ul class="nav">
+                </div>
                 <li class="active"><a href="#home">Home</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#serviços">Serviços</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <div class="dayNight">
+                    <ion-icon name="moon-outline"></ion-icon>
+                    <ion-icon name="sunny-outline"></ion-icon>
             </ul>
         </header>
  <!-- BANNER SECTION  -->      
@@ -39,10 +44,7 @@
                 </li>
                 <li><a href="mailto:evertondesigns@hotmail.com?" target="_blank"><ion-icon name="mail-outline"></ion-icon></a></li>
             </ul>
-            <div class="dayNight">
-                <ion-icon name="moon-outline"></ion-icon>
-                <ion-icon name="sunny-outline"></ion-icon>
-            </div>
+            
             <img src="src/images/colors.png" class="colors">
             <img src="src/images/men.png" class="men">
             <div class="Skills">
@@ -61,6 +63,25 @@
                 <div class="bar">
                     <h3>Python <abbr></abbr></h3>
                     <span></span>
+                </div>
+                <div class="bar">
+                    <h3>React <abbr></abbr></h3>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <h3>Photoshop <abbr></abbr></h3>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <h3>Illustrator <abbr></abbr></h3>
+                    <span></span>
+                </div>
+                <div class="bar">
+                    <h3>CorelDraw <abbr></abbr></h3>
+                    <span></span>
+                </div>
+
+
             </div>
         </section>
 <!-- BANNER SECTION END -->
@@ -170,9 +191,13 @@
         let main = document.querySelector('.main');
         let dayNight = document.querySelector('.dayNight');
         dayNight.onclick = function(){
-            main.classList.toggle('night')
+            main.classList.toggle('night');
         }
-
+        let menuToggle =document.querySelector('.menuToggle');
+        let header = document.querySelector('header');
+        menuToggle.onclick = function(){
+            header.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
