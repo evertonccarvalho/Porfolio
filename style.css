@@ -131,11 +131,10 @@ header ul li:hover a
     max-width: 200px;
     background: #008cff;
     text-align: center;
-    padding: 15px 35px;
+    padding: 10px 25px;
     font-weight: 500;
     letter-spacing: 0.05em;
     text-decoration: none;
-    margin-top: 10px;
     color: #fff;
 
 }
@@ -164,23 +163,16 @@ header ul li:hover a
     color: #008cff;
 }
 
-.Skills{
-    position: absolute;
-    bottom: 150px;
-    left: 20%;
-    max-width: 60%;
-    margin: 150px auto 0;
-
-}
 
 .Skills{
     position: absolute;
-    bottom: 150px;
+    /* max-width: 50%; */
+    bottom: 200px;
     left: 20%;
-    display: flex;
-    flex-wrap: wrap;
-    height: 200px;
-    width: 600px;
+    display: flexbox;
+    height: 150px;
+    width: 500px;
+    padding: 8px;
 
 }
 
@@ -191,9 +183,8 @@ header ul li:hover a
     font-size: 10px;
     position: relative;
     display: inline-block;
-    margin-bottom: 2px;
-    width: calc((100% / 2) - 1rem);
-    margin: 0.5rem;
+    width: calc((100% / 2) - 10px);
+    margin: 0.1rem;
 
 }
 
@@ -204,6 +195,7 @@ header ul li:hover a
     height: 5px;
     background: #cadbea;
     border-radius: 50px;
+    
 
 }
 .bar span:before{
@@ -516,17 +508,19 @@ abbr{
         padding: 20px 50px;
     }
     #home{
-        padding: 150px 50px;
+        padding: 100px 40px;
         flex-direction: column;
         padding-bottom: 0;
     }
-    #home .content h2{
+    #home .content h2,
+    #home .content h3{
         font-size: 3em;
+        
     }
 
     #home .content p{
-        font-size: 15px;
-        margin-right: 60px;
+        font-size: 15px;   
+        
         }
        
     .btn{
@@ -542,20 +536,16 @@ abbr{
     }
     
     #home .colors{
-    max-width: 300px;
+    max-width: 500px;
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
 
     }
     #home::before{
     max-width: 100px;
     max-height: 100px;
     }
-    .Skills{
-        height: 200px;
-        width: 400px;
-        left: 10%;
-    }
+
     .bar{
         
         height: 30px;        
@@ -649,47 +639,73 @@ abbr{
         bottom: 50%;
         z-index: 10;
     }
+    .Skills{
+        height: 550px;
+        width: 480px;
+        left: 10%;
+        margin: 300px auto 0;     
+        padding: 0px;
+    }
 }
-@media (max-width: 740px)
+@media (max-width: 700px)
 {
     #home .content h2{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     #home .content p{
         font-size: 15px;
         margin-right: 60px;
     }
-   
-    .Skills{
-        width: 200px;    
-    }
 
-   
-}
-
-@media (max-width: 420px)
-{
-
-    #home .content h2
-    {
-        font-size: 1.5em;
-    }
-    #home .content p
-    {
-        font-size: 13px;
-    }
     .btn
     {
         max-width: 110px ;
          font-size: 10px;
     }
-    #home .men
-    {
-        height: 40vh;
-    }
-    .Skills
-    {
-        width: 150px;        
+    .Skills{
+        height: 480px;
+        width: 450px;
+        left: 10%;
+        margin: 300px auto 0;     
+        padding: 0px;
     }
 }
+@media (max-width: 415px)
 
+{
+    #home .colors{
+        max-width: 300px;
+        position: absolute;
+        bottom: 15%;
+    
+        }
+    #home .men{
+        position: absolute;
+        height: 38vh;
+        right: 0;
+
+    }
+    .Skills{
+
+        height: 250px;
+        width: 280px;
+        left: 10%;
+        padding: 0px;
+    }
+    .bar{
+        font-size: 8px;
+    }
+
+}
+@media (max-width: 370px)
+{
+    .Skills{
+        height: 120px;
+        width: 210px;  
+        padding: 0px;
+
+    }
+    #home .men{
+        height: 32vh;
+    }
+}
