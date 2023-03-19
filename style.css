@@ -318,7 +318,7 @@ abbr{
     position: absolute;
     right: 0;
     max-width: 800px;
-    animation: animateColors 8s ease-in-out infinite;
+    animation: animateColor 8s ease-in-out infinite;
 }
 @keyframes animateColor
 {
@@ -551,6 +551,7 @@ abbr{
         height: 30px;        
      
     }
+
     .menuToggle
     {
         position: relative;
@@ -592,8 +593,9 @@ abbr{
     }
     header ul{
         display: none;
-
+        
     }
+
     header.active ul
     
     {
@@ -602,7 +604,7 @@ abbr{
         top: 84px;
         width: 100%;
         height: calc(100vh - 84px);
-        background: rgba(0, 0, 0, 0.95);
+        background: rgba(255, 255, 255, 0.637);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -613,7 +615,13 @@ abbr{
     }
         /* menu dayNyght */
     
-
+    .main.night header.active ul{
+        background: rgba(0, 0, 0, 0.95);
+    }
+    .main.night header.active
+    {
+        background: rgba(0, 0, 0, 0.95);
+    }
     .main.night .menuToggle::after 
     {       
         background: #fff; 
@@ -626,6 +634,7 @@ abbr{
         box-shadow: 0 10px #fff
         
     }
+    
     .main.night header.active .menuToggle::before
     {
         transform: translateY(0px) rotate(45deg);
@@ -681,21 +690,19 @@ abbr{
         }
     #home .men{
         position: absolute;
-        height: 38vh;
+        height: 35vh;
         right: 0;
 
     }
     .Skills{
 
-        height: 250px;
+        height: 200px;
         width: 280px;
         left: 10%;
         padding: 0px;
+        
     }
-    .bar{
-        font-size: 8px;
-    }
-
+    
 }
 @media (max-width: 370px)
 {
@@ -703,7 +710,7 @@ abbr{
         height: 120px;
         width: 210px;  
         padding: 0px;
-
+        
     }
     #home .men{
         height: 32vh;
